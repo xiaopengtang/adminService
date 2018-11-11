@@ -58,12 +58,12 @@ class HomeController extends BaseController {
         }
     }
     async apiCall(){
-        // this.cross()
         let {url, data} = this.ctx.query || {}
         if(!url){
             return this.error('参数错误')
         }
         data = JSON.parse(decodeURIComponent(data || '{}'))
+        // console.log(url, data)
         if(!this.ctx.session.user){
             return this.error('用户未登录')
         }

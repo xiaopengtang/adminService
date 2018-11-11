@@ -3,9 +3,8 @@ const path = require('path');
 module.exports = appInfo => {
   const config = exports = {
     REQUEST: {
-      host: '127.0.0.1',
-      port: '9080',
-      // pathname: 'wzt',
+      host: 'api.taoyiwenhua.cn',
+      pathname: 'wzt',
       protocol: 'http'
     }
   };

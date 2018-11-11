@@ -33,6 +33,7 @@ class BaseController extends Controller {
             data.userId = userId
         }
         url = `${host}/${url.replace(/^\/+/, '')}?${encodeURIComponent(JSON.stringify(data))}`
+        console.log({url})
         const res = await this.ctx.curl(url, {dataType: 'json'})
         return res && res.data
     }
